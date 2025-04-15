@@ -23,6 +23,13 @@ public class TextDocument implements Document {
         this.wordCount = wordCount;
     }
 
+    public String getEncoding() {
+        return encoding;
+    }
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }       
+
     @Override
     public TextDocument clone() {
         try {
@@ -35,7 +42,7 @@ public class TextDocument implements Document {
 
     @Override
     public void open() {
-        System.out.println("Opening Text Document: " + filePath + ".txt with" + encoding + "(" + wordCount + " words)" );
+        System.out.println("Opening Text Document: " + filePath + ".txt with encoding: " + encoding + " (" + wordCount + " words)" );
     }
 
     @Override

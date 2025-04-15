@@ -14,11 +14,12 @@ public class DocumentRegistry {
         TextDocument newTextDocument = textPrototype.clone();
         newTextDocument.setFilePath(filePath);
         newTextDocument.setWordCount(wordCount);
-        return textPrototype;
+        return newTextDocument;
     }
 
-    public Document createSpreadsheetDocument(int rowCount, int columnCount) {
+    public Document createSpreadsheetDocument(String spreadsheetName, int rowCount, int columnCount) {
         SpreadsheetDocument newSpreadsheetDocument = spreadsheetPrototype.clone();
+        newSpreadsheetDocument.setSpreadsheetName(spreadsheetName);
         newSpreadsheetDocument.setRowCount(rowCount);
         newSpreadsheetDocument.setColumnCount(columnCount);
         return newSpreadsheetDocument;

@@ -1,5 +1,5 @@
 class SpreadsheetDocument implements Document {
-    private String spreadsheetName = "name of spreadsheet document";
+    private String spreadsheetName = "Default Spreadsheet Name";
     private int rowCount = 0;
     private int columnCount = 0;
 
@@ -22,6 +22,12 @@ class SpreadsheetDocument implements Document {
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
+    public String getSpreadsheetName() {
+        return spreadsheetName;
+    }
+    public void setSpreadsheetName(String spreadsheetName) {
+        this.spreadsheetName = spreadsheetName;
+    }
 
     @Override
     public SpreadsheetDocument clone() {
@@ -35,7 +41,7 @@ class SpreadsheetDocument implements Document {
 
     @Override
     public void open() {
-        System.out.println("A spreadsheet opens: " + spreadsheetName);
+        System.out.println("Opening Spreadsheet Document: " + spreadsheetName + ".xlsx " + "(" + rowCount + " rows, " + columnCount + " columns)");
     }
 
     @Override

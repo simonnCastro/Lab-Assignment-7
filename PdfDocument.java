@@ -17,12 +17,17 @@ public class PdfDocument implements Document {
 
     public int getPageCount() {
         return pageCount;
-    }
+    }  
 
     public void setPageCount(int pageCount) {
         this.pageCount = pageCount;
     }
-
+    public String getAuthor() {
+        return author;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
     @Override
     public PdfDocument clone() {
         try {
@@ -35,7 +40,7 @@ public class PdfDocument implements Document {
 
     @Override
     public void open() {
-        System.out.println("Opening PDF Document: " + fileName + ".pdf by " + author + "(" + pageCount + " pages)" );
+        System.out.println("Opening PDF Document: " + fileName + ".pdf by " + author + " (" + pageCount + " pages)" );
     }
 
     @Override
